@@ -13,8 +13,11 @@ let bodyParser = require('body-parser');
 
 // Config
 let config = require('config'); 
+var router = express.Router();
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.json({message: 'Wellcome to RSS-Space-API'}))
+
+app.use('/api', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
