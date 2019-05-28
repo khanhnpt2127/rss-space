@@ -22,7 +22,7 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 });
 
-app.get('/', (req, res) => res.json({message: 'Wellcome to RSS-Space-API'}))
+router.get('/', (req, res) => res.json({message: 'Wellcome to RSS-Space-API'}))
 
 app.use('/api', router);
 
