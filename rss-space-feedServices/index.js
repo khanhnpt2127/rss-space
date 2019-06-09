@@ -11,18 +11,19 @@ var j = schedule.scheduleJob('*x/1 * * * *', function(){
 let parser = new Parser({
  customFields: {
     feed: ['updated'],
-    item: ['author:name','updated'],
+    item: ['description','pubDate'],
   }
 });
 
 (async () => {
  
-  let feed = await parser.parseURL('https://www.reddit.com/r/news/.rss');
-  console.log(feed.title);
-	console.log(feed.updated);
-	console.log("\n");
+  let feed = await parser.parseURL('http://feeds.bbci.co.uk/news/rss.xml#');
+  // console.log(feed.title);
+  // console.log(feed.updated);
+  // console.log("\n");
+//  console.log(Object.keys(feed.items[0]));
   feed.items.forEach(item => {
-    console.log(item.title + "\n" + item.link + "\n" + item.updated + "\n" +  item.author);
+    console.log(item.title + "\n" + item.link + "\n" + item.description + "\n" + item.pubDate  );
 		console.log("\n");
   });
  

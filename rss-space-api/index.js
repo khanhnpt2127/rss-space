@@ -1,5 +1,6 @@
 // Express 
 const express = require('express')
+const feedRoutes = require('./routes/feed');
 const app = express()
 const port = 3000
 
@@ -25,7 +26,8 @@ router.use(function(req, res, next) {
 router.get('/', (req, res) => res.json({message: 'Wellcome to RSS-Space-API'}))
 
 app.use('/api', router);
-
+//app.use('/feed',feedRoutes);
+app.use('/api/feed', feedRoutes);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 

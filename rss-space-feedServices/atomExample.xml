@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[BBC News - Home]]></title>
+        <description><![CDATA[BBC News - Home]]></description>
+        <link>https://www.bbc.co.uk/news/</link>
+        <image>
+            <url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+            <title>BBC News - Home</title>
+            <link>https://www.bbc.co.uk/news/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Wed, 29 May 2019 22:10:26 GMT</lastBuildDate>
+        <copyright><![CDATA[Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.]]></copyright>
+        <language><![CDATA[en-gb]]></language>
+        <ttl>15</ttl>
+        <item>
+            <title><![CDATA[Brexit: Boris Johnson ordered to appear in court over £350m claim]]></title>
+            <description><![CDATA[He is accused of misconduct in public office for his claim during the EU referendum in 2016.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-48445430</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-48445430</guid>
+            <pubDate>Wed, 29 May 2019 22:04:42 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/FCC1/production/_107150746_2fccccae-228c-42d9-9a4e-a4fd930566d8.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Robert Mueller: Charging Trump was not an option]]></title>
+            <description><![CDATA[The special counsel said legal guidelines meant he was unable to charge a sitting president.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-48450534</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-48450534</guid>
+            <pubDate>Wed, 29 May 2019 17:27:58 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/20F3/production/_107153480_59fb585f-6066-4b01-957f-d2c9096c7243.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Chelsea beat Arsenal 4-1 to win Europa League final]]></title>
+            <description><![CDATA[Eden Hazard scores twice as Chelsea beat Arsenal in the Europa League final to give manager Maurizio Sarri the first trophy of his career.]]></description>
+            <link>https://www.bbc.co.uk/sport/football/48368406</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/48368406</guid>
+            <pubDate>Wed, 29 May 2019 21:28:21 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/16DF5/production/_107158639_chelsea_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[English 'short-changed on care funding']]></title>
+            <description><![CDATA[Funding per person in Scotland is 43% higher than in England, while in Wales it is 33% higher.]]></description>
+            <link>https://www.bbc.co.uk/news/health-48438132</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/health-48438132</guid>
+            <pubDate>Wed, 29 May 2019 11:00:35 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/86F8/production/_103225543_elderlypeople.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Carbon credit fraud trial collapses as expert witness was no expert]]></title>
+            <description><![CDATA[Evidence against eight fraud defendants had been "cut-and-pasted" from the witness's other cases.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-48444605</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-48444605</guid>
+            <pubDate>Wed, 29 May 2019 17:32:26 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/133DF/production/_107151887_2607c503-b00d-4ac6-b67c-49218c992cae.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Israel to hold fresh election as Netanyahu fails to form coalition]]></title>
+            <description><![CDATA[Lawmakers vote to dissolve parliament after Prime Minister Netanyahu fails to form a coalition.]]></description>
+            <link>https://www.bbc.co.uk/news/world-middle-east-48454514</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-middle-east-48454514</guid>
+            <pubDate>Wed, 29 May 2019 22:08:00 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/12F11/production/_107158577_759cd10a-4c33-4589-ab5c-290c8668e5e5.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Caster Semenya: Olympic 800m champion files appeal to Swiss court]]></title>
+            <description><![CDATA[Olympic champion Caster Semenya files a new appeal to a Swiss court to challenge the decision regarding the restriction of testosterone levels in female runners.]]></description>
+            <link>https://www.bbc.co.uk/sport/athletics/48451529</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/athletics/48451529</guid>
+            <pubDate>Wed, 29 May 2019 17:47:47 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/2FAD/production/_106750221_semenyatwogetty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[London Bridge inquests: Attacker 'bought pink knives from Lidl']]></title>
+            <description><![CDATA[The attackers may have originally been planning to head to Oxford Street, the inquest hears.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-48443724</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-48443724</guid>
+            <pubDate>Wed, 29 May 2019 13:19:38 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/F825/production/_107152536_pg.7-lidl-knives.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Boeing CEO Dennis Muilenburg: 'We apologise to the families']]></title>
+            <description><![CDATA[Dennis Muilenburg gives his first interview since the two 737 Max crashes that killed more than 300 people.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-48454114</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-48454114</guid>
+            <pubDate>Wed, 29 May 2019 19:23:51 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/109F5/production/_107158086_p07bpsh4.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Michael Spicer: Former Tory MP and ERG founder dies aged 76]]></title>
+            <description><![CDATA[The founder of the ERG dies in hospital aged 76 after suffering from Parkinson's and leukaemia.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-48454384</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-48454384</guid>
+            <pubDate>Wed, 29 May 2019 20:52:14 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/11AD/production/_107152540_hi000092871.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Memorial held for ex-Lib Dem leader Lord Paddy Ashdown]]></title>
+            <description><![CDATA[A memorial service celebrating the life of Paddy Ashdown takes place in Yeovil.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-somerset-48382850</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-somerset-48382850</guid>
+            <pubDate>Wed, 29 May 2019 16:24:08 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/156C8/production/_104925778_f4f21c82-c53f-46f4-bde5-b273a229c493.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Moby cancels UK book tour after Natalie Portman row]]></title>
+            <description><![CDATA[The US musician tells fans he's "going to go away for a while".]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48445673</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48445673</guid>
+            <pubDate>Wed, 29 May 2019 16:39:24 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/8CFE/production/_107149063_portman-moby-pa-getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[John Cleese criticised for saying London is 'no longer an English city']]></title>
+            <description><![CDATA[The Fawlty Towers star sparks a backlash for saying London is "not really an English city any more".]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48451384</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48451384</guid>
+            <pubDate>Wed, 29 May 2019 16:48:16 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/9637/production/_107155483_cleese_get.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[What's behind the Spice Girls' sound problems?]]></title>
+            <description><![CDATA[Experts explain the issues that could be behind the negative comments about the group's comeback.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48446798</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48446798</guid>
+            <pubDate>Wed, 29 May 2019 16:59:49 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/6149/production/_107150942_2aa8ed85-b8d4-4c99-a643-a024ac6024c8.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Bridge cat stuck for six days still stranded after rescue fails]]></title>
+            <description><![CDATA[Fire crews offered tasty morsels in a bid to tempt Hatty the cat from her perch - but she wouldn't budge.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-cornwall-48450314</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-cornwall-48450314</guid>
+            <pubDate>Wed, 29 May 2019 18:41:46 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/FD4D/production/_107154846_cat.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[History of Britain's lidos celebrated]]></title>
+            <description><![CDATA[Outdoor swimming enthusiasts Janet Wilkinson and Emma Pusill have documented more than 100 lidos.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-48446815</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-48446815</guid>
+            <pubDate>Wed, 29 May 2019 15:49:05 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/15DA1/production/_107150598_saltdeanlidobrighton2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Being at work on a beautiful but dangerous Ben Nevis]]></title>
+            <description><![CDATA[A BBC film crew climb up Britain's highest mountain ahead of another surge of visitors this summer.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-scotland-highlands-islands-48448274</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-scotland-highlands-islands-48448274</guid>
+            <pubDate>Wed, 29 May 2019 14:05:15 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/17129/production/_107150549_sunrise.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Footage of Beatles' only Top of the Pops live show found]]></title>
+            <description><![CDATA[David Chandler raids his attic to find a 90-second film of the Fab Four performing Paperback Writer.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-birmingham-48450810</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-birmingham-48450810</guid>
+            <pubDate>Wed, 29 May 2019 15:58:58 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/138B7/production/_107155008_p07bnfhj.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Port Talbot Banksy mural: Artwork arrives at new home]]></title>
+            <description><![CDATA[The artwork arrives at its new home, as a garage owner says he will be glad to see the back of it.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-wales-48434084</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-wales-48434084</guid>
+            <pubDate>Wed, 29 May 2019 14:10:21 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/CF53/production/_107157035_wns_280519_banksy_move_105x.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Rapper tribute joke becomes seaside bench reality]]></title>
+            <description><![CDATA[The "Godfather of Gangsta Rap" is immortalised in a seaside town with no known hip-hop heritage.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-sussex-48443134</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-sussex-48443134</guid>
+            <pubDate>Wed, 29 May 2019 13:53:31 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/14523/production/_107153238_hi043972115.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Westlife fans left standing after Glasgow seat mishap]]></title>
+            <description><![CDATA[Fans who had paid extra for premium seats were left jostling for views after their chairs failed to arrive at the venue.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-scotland-glasgow-west-48443054</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-scotland-glasgow-west-48443054</guid>
+            <pubDate>Wed, 29 May 2019 11:53:47 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/FE3C/production/_107148056_hi005562253_crop.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['Giant Christmas bauble' in Thames sparks bomb alert]]></title>
+            <description><![CDATA[An "unexploded device" on the banks of the River Thames turns out to be an oversized decoration.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-london-48444814</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-london-48444814</guid>
+            <pubDate>Wed, 29 May 2019 09:29:02 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/13352/production/_107147687_d7ugkhqx4aaiwkc.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Pokémon Sleep app: 'We want to turn sleep into entertainment']]></title>
+            <description><![CDATA[How long a user has slept for and when they wake up will be a part of game play.]]></description>
+            <link>https://www.bbc.co.uk/news/newsbeat-48443194</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/newsbeat-48443194</guid>
+            <pubDate>Wed, 29 May 2019 09:20:11 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/4A6E/production/_107145091_gettyimages-51100699.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Apart from Brexit: What else happened in Parliament?]]></title>
+            <description><![CDATA[The B-word has dominated the Westminster world - but what else has been going on?]]></description>
+            <link>https://www.bbc.co.uk/news/uk-48043555</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-48043555</guid>
+            <pubDate>Wed, 29 May 2019 07:04:57 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/6A2B/production/_106597172_parliament.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The Yazidi family reunited after being IS slaves]]></title>
+            <description><![CDATA[Thousands of Yazidis were killed or enslaved by IS but Nashaat and his mother survived, and are about to be reunited.]]></description>
+            <link>https://www.bbc.co.uk/news/world-middle-east-48433224</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-middle-east-48433224</guid>
+            <pubDate>Tue, 28 May 2019 23:14:33 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/12C40/production/_107146867_yazidiboy_e.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Homeless and disabled: ‘I’m at my wits’ end’]]></title>
+            <description><![CDATA[Stories from the streets of Birmingham of disabled and homeless men struggling to find a permanent home.]]></description>
+            <link>https://www.bbc.co.uk/news/disability-48433225</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/disability-48433225</guid>
+            <pubDate>Tue, 28 May 2019 23:50:18 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/167D3/production/_107151129_p07bmnpx.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The diggers guided by satellites and drones]]></title>
+            <description><![CDATA[Moving earth is messy - but new technology means we can dig with an accuracy of a few centimetres.]]></description>
+            <link>https://www.bbc.co.uk/news/business-48337823</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-48337823</guid>
+            <pubDate>Tue, 28 May 2019 23:01:50 GMT</pubDate>
+            <media:thumbnail width="1024" height="575" url="http://c.files.bbci.co.uk/8DED/production/_107133363_p07bjf7h.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Hidden disability: The young film-maker shining a light on hidden illness]]></title>
+            <description><![CDATA[Film-maker Ashleigh Harley is making a documentary to raise awareness of her rare health condition.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48188039</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48188039</guid>
+            <pubDate>Tue, 28 May 2019 23:57:35 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/AD95/production/_106973444_ashleighface976.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Gavin & Stacey: Why we fell in love with Barry Island]]></title>
+            <description><![CDATA[The hit BBC sitcom is returning for a one-off Christmas special.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48431262</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48431262</guid>
+            <pubDate>Tue, 28 May 2019 10:49:00 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/9D47/production/_107136204_gavin_new.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Divorcee's touching Craigslist ad about moving on]]></title>
+            <description><![CDATA[A writer posts a heartfelt Craigslist ad of items for sale from her New York flat after a break-up.]]></description>
+            <link>https://www.bbc.co.uk/news/48404310</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/48404310</guid>
+            <pubDate>Tue, 28 May 2019 20:51:17 GMT</pubDate>
+            <media:thumbnail width="549" height="309" url="http://c.files.bbci.co.uk/D4A2/production/_107143445_6ea6e222-e6cf-417f-8da9-e5f0b70f5194.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[BBC News Channel]]></title>
+            <description><![CDATA[Britain's most-watched news channel, delivering breaking news and analysis all day, every day.]]></description>
+            <link>https://www.bbc.co.uk/news/10318089</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/10318089</guid>
+            <pubDate>Wed, 01 May 2019 18:23:45 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/059C/production/_106463410_ecb0b10f-d372-402e-aced-e7b92ab4ebd1.png"/>
+        </item>
+        <item>
+            <title><![CDATA[What is the Speaker's role in the House of Commons?]]></title>
+            <description><![CDATA[What is the job of the Speaker of the House of Commons?]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-48445464</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-48445464</guid>
+            <pubDate>Wed, 29 May 2019 11:36:17 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/F220/production/_107148916_mediaitem107148915.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Good Omens: Seat reserved for Terry Pratchett at world premiere]]></title>
+            <description><![CDATA[There was a touching tribute to Terry Pratchett as a TV adaptation of his famous novel was launched.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-48443794</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-48443794</guid>
+            <pubDate>Wed, 29 May 2019 10:06:25 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/FE8C/production/_107146156_tennantsheenpa.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Theresa May: What young Tories think about party's future]]></title>
+            <description><![CDATA[Students at Reading University want the next leader to settle Brexit and take the fight to Labour.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-48408025</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-48408025</guid>
+            <pubDate>Wed, 29 May 2019 06:54:33 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/8B79/production/_107150753_studentone_e.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Will anyone stop England? Cricket World Cup predictions]]></title>
+            <description><![CDATA[Pundits, former players, commentators and journalists pick the World Cup semi-finalists and eventual winners.]]></description>
+            <link>https://www.bbc.co.uk/sport/cricket/48425905</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/cricket/48425905</guid>
+            <pubDate>Tue, 28 May 2019 17:10:26 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/179FA/production/_107126769_kohli_morgan_smith_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The preachers getting rich from poor Americans]]></title>
+            <description><![CDATA[Some televangelists ask people to give cash to earn financial favour from God - it's often the hardest-up giving their last pennies.]]></description>
+            <link>https://www.bbc.co.uk/news/stories-47675301</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/stories-47675301</guid>
+            <pubDate>Tue, 28 May 2019 23:17:10 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/81DB/production/_106234233_larry.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Are rare earth minerals China's trump card in its trade war with US?]]></title>
+            <description><![CDATA[There is speculation that China might restrict rare earth minerals to the US. What could the impact be?]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-48366074</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-48366074</guid>
+            <pubDate>Tue, 28 May 2019 23:02:10 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/2F29/production/_107137021_gettyimages-550670017.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Why are some places gay-friendly and not others?]]></title>
+            <description><![CDATA[Attitudes towards gay people are more tolerant in some countries, but others buck the trend.]]></description>
+            <link>https://www.bbc.co.uk/news/health-48337639</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/health-48337639</guid>
+            <pubDate>Tue, 28 May 2019 23:19:01 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/101D0/production/_107100066_taiwancoupleoutside.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Michael Dunlop: The man who lost a brother, father & uncle to biking, but races on]]></title>
+            <description><![CDATA[Michael Dunlop's brother, father and uncle all died racing motorbikes. He continues to shine as one of the sport's most brilliant riders.]]></description>
+            <link>https://www.bbc.co.uk/sport/motorsport/48297727</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/motorsport/48297727</guid>
+            <pubDate>Tue, 28 May 2019 23:06:54 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/0358/production/_107065800_indx.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Could making recycling pay save the planet?]]></title>
+            <description><![CDATA[Encouraging recycling as a moral good may not make sense.]]></description>
+            <link>https://www.bbc.co.uk/news/business-48214033</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-48214033</guid>
+            <pubDate>Tue, 28 May 2019 23:02:03 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/1613C/production/_106982409_editgettyimages-1133206406.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['I think it's a goodbye' - Hazard hints at Chelsea exit]]></title>
+            <description><![CDATA[Eden Hazard suggests he has played his final game for Chelsea after his two goals help them win the Europa League.]]></description>
+            <link>https://www.bbc.co.uk/sport/football/48454624</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/48454624</guid>
+            <pubDate>Wed, 29 May 2019 22:09:43 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/75E9/production/_107158103_hazard_rex.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[French Open: Johanna Konta reaches third round]]></title>
+            <description><![CDATA[British number one Johanna Konta beats American Lauren Davis to move into the third round of the French Open in Paris.]]></description>
+            <link>https://www.bbc.co.uk/sport/tennis/48452036</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/tennis/48452036</guid>
+            <pubDate>Wed, 29 May 2019 19:46:57 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/1883/production/_107157260_kontawins_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Eden Hazard: Five of the Chelsea midfielder's best goals]]></title>
+            <description><![CDATA[Watch a selection of Eden Hazard's best goals for Chelsea.]]></description>
+            <link>https://www.bbc.co.uk/sport/av/football/48453444</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/av/football/48453444</guid>
+            <pubDate>Wed, 29 May 2019 21:26:34 GMT</pubDate>
+            <media:thumbnail width="1024" height="575" url="http://c.files.bbci.co.uk/11085/production/_107156796_p07bp21l.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Favourites England begin bid to win their first World Cup]]></title>
+            <description><![CDATA[The Cricket World Cup begins on Thursday, with world number one side England seeking to win the tournament for the first time.]]></description>
+            <link>https://www.bbc.co.uk/sport/cricket/48447694</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/cricket/48447694</guid>
+            <pubDate>Wed, 29 May 2019 16:51:52 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/EBC3/production/_107155306_captains.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['World Cup opener can't come quickly enough - we're ready to put on a show']]></title>
+            <description><![CDATA[England pace bowler Mark Wood reveals which team-mate is always playing pranks and who has Mario Kart in his bedroom.]]></description>
+            <link>https://www.bbc.co.uk/sport/cricket/48439122</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/cricket/48439122</guid>
+            <pubDate>Wed, 29 May 2019 08:43:17 GMT</pubDate>
+            <media:thumbnail width="1600" height="900" url="http://c.files.bbci.co.uk/C71D/production/_107137905_markwood-2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Fourth seed Bertens out with illness; Pliskova & Stephens advance]]></title>
+            <description><![CDATA[Fourth seed Kiki Bertens retires from her French Open second-round match against Viktoria Kuzmova with illness.]]></description>
+            <link>https://www.bbc.co.uk/sport/tennis/48446224</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/tennis/48446224</guid>
+            <pubDate>Wed, 29 May 2019 19:47:43 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/C39B/production/_107157005_kiki_bertens_epa.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Inside the Warwick University rape chat scandal]]></title>
+            <description><![CDATA[Anna found her friends' sexually violent online chat - and saw she was mentioned hundreds of times.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-48366835</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-48366835</guid>
+            <pubDate>Tue, 28 May 2019 16:09:43 GMT</pubDate>
+            <media:thumbnail width="1773" height="997" url="http://c.files.bbci.co.uk/769A/production/_107126303_r9rjpxjy.png"/>
+        </item>
+        <item>
+            <title><![CDATA[The Theresa May story: The Tory leader brought down by Brexit]]></title>
+            <description><![CDATA[How Brexit led to the downfall of the UK's second female prime minister.]]></description>
+            <link>https://www.bbc.co.uk/news/election-2017-46225949</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/election-2017-46225949</guid>
+            <pubDate>Fri, 24 May 2019 09:36:01 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/1177D/production/_107094517_may_reuters_life_story_index.jpg"/>
+        </item>
+    </channel>
+</rss>
