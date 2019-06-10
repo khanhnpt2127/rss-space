@@ -1,9 +1,12 @@
-module.exports = function(app){
+const express = require('express')
 
-    app.get('/feed', function(req, res){
-        res.render('feed', {
-            title: 'Feed Provider API'
-        });
-    });
+const { article } = require('../controllers')
 
-}
+const router = express.Router()
+
+router.get('/getArticle', article.getArticle)
+
+module.exports = router
+
+
+
