@@ -6,11 +6,20 @@ const port = 3000
 //  Mongoosse 
 let mongoose = require('mongoose');
 let morgan = require('morgan');
-let bodyParser = require('body-parser');
 
 // Config
 let config = require('config'); 
 var router = express.Router();
+
+// Parser 
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
