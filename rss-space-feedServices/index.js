@@ -8,6 +8,9 @@ var schedule = require('node-schedule');
 let Parser = require('rss-parser');
 
 
+// MQ Lib
+var amqp = require('amqplib/callback_api');
+
 function validateRssLink(feedLink) {
 
 // Validate feedLink 
@@ -36,12 +39,9 @@ customFields: {
     item: ['description','pubDate'],
   }
 });
-
+var feedArticles = new FeedArticles();
 (async () => {
   
-  var feedArticles = new FeedArticles();
-
-
   let feed = await parser.parseURL(feedLink);
   feedArticles.feedId = "";
   feedArticles.lastBuildDate = feed.lastBuildDate;
@@ -50,13 +50,10 @@ customFields: {
   feed.items.forEach(item => {
     feedArticles.articles.push(item);
   });
-  
-  
 
-  console.log(feedArticles)
-
+  sendBroker(feedArticles)
 })();
-
+  
 
 }
 
@@ -65,6 +62,41 @@ customFields: {
 // Main 
 
 
-
 fetchFeedData("http://feeds.bbci.co.uk/news/business/rss.xml",null)
 //ParseProfileBuilder("http://feeds.bbci.co.uk/news/business/rss.xml")
+
+
+
+function sendBroker(feeddata) {
+  amqp.connect('amqp://localhost:5672', function(error0, connection) {
+      if (error0) {
+          throw error0;
+      }
+      connection.createChannel(function(error1, channel) {
+          if (error1) {
+              throw error1;
+          }
+
+          var queue = 'hello';
+          
+          
+          const data = JSON.stringify(feeddata);
+          var msg = data;
+
+          channel.assertQueue(queue, {
+              durable: false
+          });
+          channel.sendToQueue(queue, Buffer.from(msg));
+
+          console.log(" [x] Sent %s", msg);
+      });
+      setTimeout(function() {
+          connection.close();
+          process.exit(0);
+      }, 500);
+  });
+
+}
+
+
+

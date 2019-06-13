@@ -20,7 +20,6 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
         channel.consume(queue, function(msg) {
             console.log(" [x] Received %s", msg.content.toString());
             var jsonObject = JSON.parse(msg.content.toString());
-            console.log("\n" + jsonObject.name + "\n" + jsonObject.age);
         }, {
             noAck: true
         });
