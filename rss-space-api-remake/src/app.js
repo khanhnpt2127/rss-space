@@ -21,6 +21,19 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 
+// Mongoose 
+const uri = "mongodb://tknguyen2127:ZfVDJD3NcAHqX4F6@cluster0-shard-00-00-eutnm.mongodb.net:27017,cluster0-shard-00-01-eutnm.mongodb.net:27017,cluster0-shard-00-02-eutnm.mongodb.net:27017/rss-space?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+
+mongoose.connect(uri).then(
+  () => { },
+  err => { 
+  // Add to LOG
+  //console.log(err)  
+  }
+);
+
+
+
 // middleware to use for all requests
 router.use(function(req, res, next) {
     // do logging

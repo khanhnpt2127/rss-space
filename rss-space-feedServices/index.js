@@ -17,14 +17,15 @@ let parser = new Parser({
 
 (async () => {
  
-  let feed = await parser.parseURL('http://feeds.bbci.co.uk/news/rss.xml#');
+  let feed = await parser.parseURL('http://feeds.bbci.co.uk/news/business/rss.xml');
   // console.log(feed.title);
   // console.log(feed.updated);
   // console.log("\n");
 //  console.log(Object.keys(feed.items[0]));
+  console.log(feed.title);
   feed.items.forEach(item => {
-    console.log(item.title + "\n" + item.link + "\n" + item.description + "\n" + item.pubDate  );
-		console.log("\n");
+    //console.log(item.title + "\n" + item.link + "\n" + item.description + "\n" + item.pubDate  );
+    //console.log("\n");
   });
  
 })();

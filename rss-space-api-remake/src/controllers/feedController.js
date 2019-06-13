@@ -2,7 +2,15 @@
 let FeedModel = require('../models/feed.model')
 // handle get Feed action
 exports.getAll = function(req,res) {
-    res.send('hello from Controller');
+
+		FeedModel.find({},function(err,f){
+			if(err) {
+				//LOG
+				console.log(err);
+				res.status(500).send(err)
+			}
+			res.status(200).send(f)
+		})	
 
 }
 
