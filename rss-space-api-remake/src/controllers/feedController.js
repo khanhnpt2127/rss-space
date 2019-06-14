@@ -33,7 +33,6 @@ exports.postNew = function(req,res) {
 
   if(validatorResult) {
 
-
     validator.FeedProviderValidator(req.body.link, (result, data) => {
       if (result) {
        

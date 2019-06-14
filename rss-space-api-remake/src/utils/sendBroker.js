@@ -24,7 +24,7 @@ function sendData(feedProvider) {
         });
         setTimeout(function () {
             connection.close();
-            process.exit(0);
+            //process.exit(0);
         }, 500);
     });
 

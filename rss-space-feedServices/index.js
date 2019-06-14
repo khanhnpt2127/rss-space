@@ -30,7 +30,7 @@ function ParseProfileBuilder(feedLink) {
 
 
 
-function fetchFeedData(feedLink, parserProfile) {
+function fetchFeedData(feedLink,feed_id,parserProfile) {
 
 
 let parser = new Parser({
@@ -43,7 +43,7 @@ var feedArticles = new FeedArticles();
 (async () => {
   
   let feed = await parser.parseURL(feedLink);
-  feedArticles.feedId = "";
+  feedArticles.feedId = feed_id;
   feedArticles.lastBuildDate = feed.lastBuildDate;
 
 
@@ -87,6 +87,11 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
         channel.consume(queue, function(msg) {
             console.log(" [x] Received %s", msg.content.toString());
             var jsonObject = JSON.parse(msg.content.toString());
+
+            // Parse
+            fetchFeedData(jsonObject.link, jsonObject._id)
+            
+
         }, {
             noAck: true
         });
@@ -123,7 +128,7 @@ function sendBroker(feeddata) {
       });
       setTimeout(function() {
           connection.close();
-          process.exit(0);
+          //process.exit(0);
       }, 500);
   });
 

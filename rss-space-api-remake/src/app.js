@@ -34,12 +34,13 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
 
           // Save to DB
           var feedScheme = new FeedScheme(jsonObject)
-          feedScheme.feedId = "5d0108344ecd26ba675bbfca"
+           
           //console.log(feedScheme); 
           feedScheme.save(function(err, feed) {
             if(err) console.log(err)
             //console.log(feed)
-            // TODO: 
+            // TODO:
+           
           })
 
         }, {
