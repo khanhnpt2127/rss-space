@@ -6,6 +6,10 @@ let FeedModel = require('../models/feed.model')
 let validator = require('../utils/validator')
 
 
+// import MQ Send 
+let sendBroker = require('../utils/sendBroker')
+
+
 // handle get Feed action
 exports.getAll = function(req,res) {
 
@@ -41,6 +45,8 @@ exports.postNew = function(req,res) {
               }
               
               // Send Profile to Feed Services
+              sendBroker(feed)              
+
               res.status(201).send(feed)
               }); 
       } else {
