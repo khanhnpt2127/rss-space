@@ -18,6 +18,16 @@ function validateRssLink(feedLink) {
 }
 
 
+
+// CRON Service
+function setCron(timer, feedLink, id) {
+    
+    var j = schedule.scheduleJob('*/1 * * * *', function(){
+        fetchNewFeedData(feedLink,id)
+    
+    });
+}
+
 function ParseProfileBuilder(feedLink) {
   // Validate Standard RSS Profile 
   let parser = new Parser(); 
@@ -28,7 +38,45 @@ function ParseProfileBuilder(feedLink) {
   })(); 
 }
 
+// refresh Feed Data 
 
+function fetchNewFeedData(feedLink, feed_id) {
+
+    let parser = new Parser({
+        customFields: {
+            feed: ['updated'],
+            item: ['description','pubDate'],
+          }
+    });
+
+    var feedArticles = new FeedArticles();
+    
+    (async () => {
+        
+        let feed = await parser.parseURL(feedLink);
+        feedArticles.feedId = feed_id;
+        feedArticles.lastBuildDate = feed.lastBuildDate;
+    
+    
+        feed.items.forEach(item => {
+        feedArticles.articles.push(item);
+        });
+    
+        //sendBroker(feedArticles)
+    
+        console.log(feed);
+    
+        // Compare the last version 
+
+        // Send to Broker to Update
+    })();
+
+}
+
+
+
+
+// fetch New Feed Data 
 
 function fetchFeedData(feedLink,feed_id,parserProfile) {
 
@@ -52,6 +100,11 @@ var feedArticles = new FeedArticles();
   });
 
   sendBroker(feedArticles)
+
+  // Set CRON Services
+  setCron("",feedLink,feed_id)
+
+
 })();
   
 
