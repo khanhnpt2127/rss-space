@@ -1,5 +1,11 @@
 // import MODEL 
 let FeedModel = require('../models/feed.model')
+
+
+// import Validator
+let validator = require('../utils/validator')
+
+
 // handle get Feed action
 exports.getAll = function(req,res) {
 
@@ -18,22 +24,46 @@ exports.getAll = function(req,res) {
 exports.postNew = function(req,res) {
   var feed = new FeedModel(req.body)	
   
-  // Save Profile to DB
-	feed.save(function(err,feed) {
-    if (err) {
-      res.status(500).send(err);
-      return console.error(err);
-    }
-    
+  //Validate the Correct Format 
+  var validatorResult = validator.URLValidator(feed.link)
 
-    // Send Profile to Feed Services
-    res.status(201).send(feed)
-  });
+  if(validatorResult) {
 
+
+    validator.FeedProviderValidator(req.body.link, (result, data) => {
+      if (result) {
+       
+            // Save Profile to DB
+            feed.save(function(err,feed) {
+              if (err) {
+                res.status(500).send(err);
+                return console.error(err);
+              }
+              
+              // Send Profile to Feed Services
+              res.status(201).send(feed)
+              }); 
+      } else {
+        // return Data
+        res.status(412).send({ "msg": "duplicated" })
+      }
+    })
+
+
+  } else {
+    res.status(412).send({ "msg": "Invalid URL" })
+  }
+
+
+  /*
+
+  */
+
+  //res.status(200).send(validatorResult)
 };
 
 // handle get Feed by ID
-exports.getById = function(req, res) {
+exports.getById = function (req, res) {
   res.send(`Get By ID ${req.params.id}`);
 }
 

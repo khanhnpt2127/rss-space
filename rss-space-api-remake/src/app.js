@@ -19,7 +19,7 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
             throw error1;
         }
 
-        var queue = 'hello';
+        var queue = 'feedDataReceiver';
 
         channel.assertQueue(queue, {
             durable: false
