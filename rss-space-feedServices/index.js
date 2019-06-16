@@ -7,6 +7,12 @@ var schedule = require('node-schedule');
 // RSS Parser
 let Parser = require('rss-parser');
 
+// write - file
+let writer = require('./write-file')
+
+
+// getNewFeedData
+let getNewFeedData = require('./getNewDataFeed')
 
 // MQ Lib
 var amqp = require('amqplib/callback_api');
@@ -21,8 +27,8 @@ function validateRssLink(feedLink) {
 
 // CRON Service
 function setCron(timer, feedLink, id) {
-    
-    var j = schedule.scheduleJob('*/1 * * * *', function(){
+   // Change time CRON 
+    var j = schedule.scheduleJob('*/10 * * * *', function(){
         fetchNewFeedData(feedLink,id)
     
     });
@@ -64,11 +70,27 @@ function fetchNewFeedData(feedLink, feed_id) {
     
         //sendBroker(feedArticles)
     
-        console.log(feed);
+        //console.log(feed);
     
         // Compare the last version 
+            // get File 
+            //var lastData = JSON.parseURL(`./data/${feed_id}.json`);
 
-        // Send to Broker to Update
+            writer.readFileToJSON(`./data/${feed_id}.json`, (lastFeedData) => {
+                
+                var newData = getNewFeedData(feedArticles.articles, lastFeedData.articles);                
+                console.log(newData)
+                // Send newData to update 
+
+                // write newData to 
+                newData.forEach((newFeed) => {
+                    lastFeedData.articles.push(newFeed)
+                })
+                // Write the newData to file
+                writer.deleteFile(`./data/${feed_id}.json`)
+                writer.writeJSONtoFile(`./data/${feed_id}.json`,JSON.stringify(lastFeedData))  
+            })
+
     })();
 
 }
@@ -101,6 +123,7 @@ var feedArticles = new FeedArticles();
 
   sendBroker(feedArticles)
 
+  writer.writeJSONtoFile(`./data/${feed_id}.json`,JSON.stringify(feedArticles))
   // Set CRON Services
   setCron("",feedLink,feed_id)
 
