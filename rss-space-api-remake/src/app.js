@@ -72,7 +72,27 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
         channel.consume(queue, function(msg) {
             //console.log(" [x] Received %s", msg.content.toString());
             var jsonObject = JSON.parse(msg.content.toString());
-            console.log(jsonObject)
+            //console.log(jsonObject)
+
+
+            // Update to DB
+            FeedScheme.findOne({feedId: jsonObject.feedId},(err, doc) =>{
+              if(err) console.log(err)
+              //console.log(doc)
+              jsonObject.articles.forEach(element => {
+                  doc.articles.push(element)                
+              });
+
+              console.log(doc)
+              
+              doc.save((err) => {
+                if (err) console.log(err)
+              });
+              
+            })
+
+
+
 
           /*
           // Save to DB

@@ -81,7 +81,8 @@ function fetchNewFeedData(feedLink, feed_id) {
                 var newData = getNewFeedData(feedArticles.articles, lastFeedData.articles);                
                 console.log(newData)
 
-                if (!newData) return; 
+                //if (!newData.leghth) return; 
+                console.log(newData.leghth)
                 // Build Model for sender 
                 const newDataSender = {
                     feedId: String,

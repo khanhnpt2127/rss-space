@@ -17,6 +17,6 @@ let FeedArticles = new mongoose.Schema({
     feedId: {type: String, required: true, unique: true},
     lastBuildDate: String,
     articles: {type: Array, default: []}
-}, {collection: "feedArticles"})
+}, {collection: "feedArticles", usePushEach: true})
 
 module.exports = mongoose.model('feedArticles', FeedArticles)
