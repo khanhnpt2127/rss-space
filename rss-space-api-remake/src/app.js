@@ -83,7 +83,7 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
                   doc.articles.push(element)                
               });
 
-              console.log(doc)
+              //console.log(doc)
               
               doc.save((err) => {
                 if (err) console.log(err)

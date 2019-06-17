@@ -2,6 +2,7 @@
     <div>
     <Navbar />
     <feedProvider />
+    <FeedContent />
     </div>
 </template>
 
@@ -9,13 +10,16 @@
 
 import Navbar from './components/nav-bar.vue'
 import feedProvider from './components/feed-provider-selector.vue'
+import FeedContent from './components/feed-content.vue'
+
 
 
 export default {
   name: 'app',
   components: {
     Navbar,
-    feedProvider
+    feedProvider,
+    FeedContent
   }
 }
 </script>

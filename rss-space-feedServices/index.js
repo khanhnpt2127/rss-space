@@ -79,10 +79,10 @@ function fetchNewFeedData(feedLink, feed_id) {
             writer.readFileToJSON(`./data/${feed_id}.json`, (lastFeedData) => {
                 
                 var newData = getNewFeedData(feedArticles.articles, lastFeedData.articles);                
-                console.log(newData)
+//                console.log(newData)
 
                 //if (!newData.leghth) return; 
-                console.log(newData.leghth)
+//                console.log(newData.leghth)
                 // Build Model for sender 
                 const newDataSender = {
                     feedId: String,
@@ -91,7 +91,7 @@ function fetchNewFeedData(feedLink, feed_id) {
                 
                 newDataSender.feedId = feed_id
                 newDataSender.articles = newData
-                console.log(newDataSender)
+                //console.log(newDataSender)
                 // Send newData to update 
                 amqp.connect('amqp://localhost:5672', function(error0, connection) {
                     if (error0) {
