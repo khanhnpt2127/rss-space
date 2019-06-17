@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Wellcome"/>
-  </div>
+    <div>
+    <Navbar />
+    <feedProvider />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/nav-bar.vue'
+import feedProvider from './components/feed-provider-selector.vue'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Navbar,
+    feedProvider
   }
 }
 </script>
