@@ -19,42 +19,17 @@
         <md-card-media>
           <!-- swiper -->
           <swiper :options="swiperOption">
-            <swiper-slide>
-              <b-card style="max-width: 15rem; background-color: " img-src="http://i2.cdn.turner.com/cnn/2015/images/09/24/cnn.digital.png" img-alt="Image" img-top title="BBC 2" class="text-center">
+            
 
-                <b-card-text>Politics</b-card-text>
-                <b-button href="#" variant="primary">Follow</b-button>
-              </b-card>
-            </swiper-slide>
+            <swiper-slide v-for="feed in feedProviders" :key="feed._id">
+              <b-card style="max-width: 15rem; background-color: " img-src="" img-alt="Image" img-top v-bind:title="feed.name" class="text-center">
 
-            <swiper-slide>
-              <b-card style="max-width: 15rem; background-color: " title="BBC 1" class="text-center">
-                <b-card-text>Politics</b-card-text>
-                <b-button href="#" variant="primary">Follow</b-button>
-              </b-card>
-            </swiper-slide>
-
-            <swiper-slide>
-              <b-card style="max-width: 15rem; background-color: " title="BBC 3" class="text-center">
-                <b-card-text>Politics</b-card-text>
-                <b-button href="#" variant="primary">Follow</b-button>
-              </b-card>
-            </swiper-slide>
-
-            <swiper-slide>
-              <b-card style="max-width: 15rem; background-color: " title="BBC 3" class="text-center">
-                <b-card-text>Politics</b-card-text>
+                <b-card-text> {{ feed.name }}</b-card-text>
                 <b-button href="#" variant="primary">Follow</b-button>
               </b-card>
             </swiper-slide>
 
 
-            <swiper-slide>
-              <b-card style="max-width: 15rem; background-color: " title="BBC 3" class="text-center">
-                <b-card-text>Politics</b-card-text>
-                <b-button href="#" variant="primary">Follow</b-button>
-              </b-card>
-            </swiper-slide>
 
 
 
@@ -81,6 +56,14 @@ export default {
         swiper,
         swiperSlide
     },
+        mounted() {
+            fetch("http://localhost:3000/api/feed/")
+            .then(res => res.json())
+            .then((data) => {
+                this.feedProviders = data
+            })
+        }
+    , 
     data() {
         return {
           swiperOption: {
@@ -97,7 +80,8 @@ export default {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }
-        }
+          },
+          feedProviders: []
         }
     },
 }

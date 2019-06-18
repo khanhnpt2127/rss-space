@@ -14,17 +14,17 @@
               <font-awesome-icon icon="burn"/>
             </span> Hot
           </b-nav-item>
-          <b-nav-item v-b-modal.addNewProviderModal>
+          <b-nav-item v-if="isLogin" v-b-modal.addNewProviderModal>
             <span>
               <font-awesome-icon icon="plus-square"/>
             </span> New Feed
           </b-nav-item>
-          <b-nav-item v-b-modal.LoginModal>
+          <b-nav-item v-if="!isLogin" v-b-modal.LoginModal>
             <span>
               <font-awesome-icon icon="sign-in-alt"/>
             </span> Login
           </b-nav-item>
-          <b-nav-item>
+          <b-nav-item v-if="isLogin">
             <span>
               <font-awesome-icon icon="sign-out-alt"/>
             </span> Logout
@@ -34,20 +34,20 @@
     </b-navbar>
     <b-modal id="addNewProviderModal" title="Add New Feed Provider">
       <!--TODO: Add Validation-->
-      <label for="input-none">Name:</label>
-      <b-form-input id="input-none" :state="null" placeholder></b-form-input>
+      <label for="input-name">Name:</label>
+      <b-form-input id="input-name" :state="null" placeholder></b-form-input>
 
-      <label for="input-none" style="margin-top:10px">Link:</label>
-      <b-form-input id="input-none" :state="null" placeholder></b-form-input>
+      <label for="input-link" style="margin-top:10px">Link:</label>
+      <b-form-input id="input-link" :state="null" placeholder></b-form-input>
     </b-modal>
 
     <b-modal id="LoginModal" title="Add New Feed Provider">
       <!--TODO: Add Validation-->
-      <label for="input-none">UserName:</label>
-      <b-form-input id="input-none" :state="null" placeholder></b-form-input>
+      <label for="input-username">UserName:</label>
+      <b-form-input id="input-username" :state="null" placeholder></b-form-input>
 
-      <label for="input-none" style="margin-top:10px">Password:</label>
-      <b-form-input id="input-none" type="password" :state="null" placeholder></b-form-input>
+      <label for="input-password" style="margin-top:10px">Password:</label>
+      <b-form-input id="input-password" type="password" :state="null" placeholder></b-form-input>
     </b-modal>
   </div>
 </template>
@@ -56,7 +56,9 @@
 export default {
   name: "Navbar",
   data() {
-    return {};
+    return {
+      isLogin: false,
+    };
   }
 };
 </script>

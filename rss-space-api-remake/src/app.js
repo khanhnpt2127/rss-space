@@ -2,7 +2,10 @@
 const express = require('express')
 const app = express()
 const port = 3000
+var cors = require('cors');
 
+
+app.use(cors());
 //  Mongoosse 
 let mongoose = require('mongoose');
 let morgan = require('morgan');
