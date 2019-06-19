@@ -9,7 +9,7 @@
             <b-button size="sm" v-b-toggle="'accordion-' + index" style="margin-right: 10 px; background-color: rgb(233, 236, 239);border: none; "> <font-awesome-icon style="font-size: 30px;" icon="caret-down" /> </b-button>
             <div style="display:inline-block; vertical-align: center; margin-left: 10px; text-align: center"> <span style="font-size: 20px; font-weight: bold" > {{feed.feedName}} </span> <span> <font-awesome-icon style="font-size: 18px;" icon="cog" /> </span></div>
         </div>
-        <b-collapse v-bind:id="'accordion-' + index" visible accordion="my-accordion" role="tabpanel">
+        <b-collapse v-bind:id="'accordion-' + index" accordion="my-accordion" role="tabpanel">
         <b-list-group  style="padding: 20px;">
 
           <b-list-group-item v-for="feedArticle in feed.articles" :key="feedArticle._id" v-bind:href="feedArticle.link"  target="_blank" class="flex-column align-items-start" style="padding:20px; padding-right: 20px; margin-top: 10px;">

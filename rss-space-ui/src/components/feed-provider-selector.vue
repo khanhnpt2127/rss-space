@@ -22,10 +22,12 @@
             
 
             <swiper-slide v-for="feed in feedProviders" :key="feed._id">
-              <b-card style="max-width: 20rem; background-color: " img-src="" img-alt="Image" img-top v-bind:title="feed.feedName" class="text-center">
+              <b-card style="max-height: 10rem;max-width: 20rem;" img-src="" img-alt="Image" img-top v-bind:title="feed.feedName" class="text-center text-break text-truncate" >
 
                 <b-card-text> {{ feed.name }}</b-card-text>
-                <b-button href="#" variant="primary">Follow</b-button>
+                <b-button href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary">Subcribe</b-button>
+
+                <b-button v-if="false" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary"> Unsubcribe </b-button>
               </b-card>
             </swiper-slide>
 
