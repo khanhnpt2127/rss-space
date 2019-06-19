@@ -160,6 +160,7 @@ customFields: {
   }
 });
 var feedArticles = new FeedArticles();
+var feedArticlesLocal = new FeedArticles();
 (async () => {
   
   let feed = await parser.parseURL(feedLink);
@@ -168,17 +169,23 @@ var feedArticles = new FeedArticles();
   feedArticles.feedDesc = feed.description;
   feedArticles.lastBuildDate = feed.lastBuildDate;
 
+  feedArticlesLocal.feedId = feed_id;
+  feedArticlesLocal.feedName = feed.title;
+  feedArticlesLocal.feedDesc = feed.description;
+  feedArticlesLocal.lastBuildDate = feed.lastBuildDate;
 
   feed.items.forEach(item => {
+    feedArticlesLocal.articles.push(item)
     item._id = mongoose.Types.ObjectId();
     feedArticles.articles.push(item);
   });
 
+
   sendBroker(feedArticles)
 
-  writer.writeJSONtoFile(`./data/${feed_id}.json`,JSON.stringify(feedArticles))
+  writer.writeJSONtoFile(`./data/${feed_id}.json`,JSON.stringify(feedArticlesLocal))
   // Set CRON Services
-  //setCron("",feedLink,feed_id)
+  setCron("",feedLink,feed_id)
 
 
 })();
