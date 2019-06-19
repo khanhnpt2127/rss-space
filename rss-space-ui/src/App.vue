@@ -3,15 +3,17 @@
     <Navbar />
     <feedProvider />
     <FeedContent />
+    <go-top bg-color="#16A2B8"></go-top>
     </div>
 </template>
-
+<script src="vue.js"></script>
+<script src="vue-go-top.min.js"></script>
 <script>
 
 import Navbar from './components/nav-bar.vue'
 import feedProvider from './components/feed-provider-selector.vue'
 import FeedContent from './components/feed-content.vue'
-
+import GoTop from '@inotom/vue-go-top';
 
 
 export default {
@@ -19,7 +21,8 @@ export default {
   components: {
     Navbar,
     feedProvider,
-    FeedContent
+    FeedContent,
+    GoTop
   }
 }
 </script>

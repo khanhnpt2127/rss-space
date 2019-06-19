@@ -8,7 +8,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSignOutAlt,faCaretDown, faCaretRight, faCog, faPlusSquare,faBurn, faNewspaper, faSignInAlt  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
 library.add(faCog)
 library.add(faPlusSquare)
 library.add(faBurn)
@@ -21,8 +20,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
  
 Vue.config.productionTip = false
 
-
 Vue.config.productionTip = false
+//Vue.use(GoTop);
 Vue.use(BootstrapVue)
 new Vue({
   render: h => h(App),
