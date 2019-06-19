@@ -22,7 +22,7 @@
             
 
             <swiper-slide v-for="feed in feedProviders" :key="feed._id">
-              <b-card style="max-width: 15rem; background-color: " img-src="" img-alt="Image" img-top v-bind:title="feed.name" class="text-center">
+              <b-card style="max-width: 20rem; background-color: " img-src="" img-alt="Image" img-top v-bind:title="feed.feedName" class="text-center">
 
                 <b-card-text> {{ feed.name }}</b-card-text>
                 <b-button href="#" variant="primary">Follow</b-button>
@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<<script>
+<script>
 
 // require styles
 import 'swiper/dist/css/swiper.css'
@@ -67,7 +67,7 @@ export default {
     data() {
         return {
           swiperOption: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 5,
           slidesPerGroup: 3,
           loop: false,

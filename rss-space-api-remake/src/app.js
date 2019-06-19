@@ -10,6 +10,8 @@ app.use(cors());
 let mongoose = require('mongoose');
 let morgan = require('morgan');
 let FeedScheme = require('./models/feedArticles')
+let FeedProviderSchema = require('./models/feed.model')
+
 // MQ Broker
 var amqp = require('amqplib/callback_api');
 
@@ -38,7 +40,15 @@ amqp.connect('amqp://localhost:5672', function(error0, connection) {
 
           // Save to DB
           var feedScheme = new FeedScheme(jsonObject)
-           
+          
+          
+          // Update FeedName
+          FeedProviderSchema.findOne({ _id: jsonObject.feedId },(err, doc) => {
+            if(err) console.log(err)
+            doc.feedName = jsonObject.feedName
+            doc.save()
+          })
+
           //console.log(feedScheme); 
           feedScheme.save(function(err, feed) {
             if(err) console.log(err)

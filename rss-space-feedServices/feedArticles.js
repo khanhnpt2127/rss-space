@@ -15,6 +15,8 @@ let FeedArticle = mongoose.Schema({
 
 let FeedArticles = new mongoose.Schema({
     feedId: {type: String, required: true, unique: true},
+    feedName: {type: String},
+    feedDesc: {type: String},
     lastBuildDate: String,
     articles: {type: Array, default: []}
 }, {collection: "feedArticles"})

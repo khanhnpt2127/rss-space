@@ -6,6 +6,7 @@ let mongoose = require('mongoose');
 
 let FeedSchema = new mongoose.Schema({
   name: String,
+  feedName: {type: String, default:'' }, 
   link: { type: String, required: true, unique: true },
   createdDate: { type: Date, default: Date.now}
 },{ collection: "feedProviderProfiles"})

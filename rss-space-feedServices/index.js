@@ -17,6 +17,10 @@ let getNewFeedData = require('./getNewDataFeed')
 // MQ Lib
 var amqp = require('amqplib/callback_api');
 
+
+
+var mongoose = require('mongoose');
+
 function validateRssLink(feedLink) {
 
 // Validate feedLink 
@@ -61,11 +65,14 @@ function fetchNewFeedData(feedLink, feed_id) {
         
         let feed = await parser.parseURL(feedLink);
         feedArticles.feedId = feed_id;
+        feedArticles.feedName = feed.title;
+        feedArticles.feedDesc = feed.description;
         feedArticles.lastBuildDate = feed.lastBuildDate;
     
     
         feed.items.forEach(item => {
-        feedArticles.articles.push(item);
+            item._id = mongoose.Types.ObjectId(); 
+            feedArticles.articles.push(item);
         });
     
         //sendBroker(feedArticles)
@@ -86,10 +93,12 @@ function fetchNewFeedData(feedLink, feed_id) {
                 // Build Model for sender 
                 const newDataSender = {
                     feedId: String,
+                    lastBuildDate: String, 
                     articles: {type: Array, default: []}
                 };
                 
                 newDataSender.feedId = feed_id
+                newDataSender.lastBuildDate = feedArticles.lastBuildDate
                 newDataSender.articles = newData
                 //console.log(newDataSender)
                 // Send newData to update 
@@ -139,7 +148,6 @@ function fetchNewFeedData(feedLink, feed_id) {
 
 
 
-
 // fetch New Feed Data 
 
 function fetchFeedData(feedLink,feed_id,parserProfile) {
@@ -156,10 +164,13 @@ var feedArticles = new FeedArticles();
   
   let feed = await parser.parseURL(feedLink);
   feedArticles.feedId = feed_id;
+  feedArticles.feedName = feed.title;
+  feedArticles.feedDesc = feed.description;
   feedArticles.lastBuildDate = feed.lastBuildDate;
 
 
   feed.items.forEach(item => {
+    item._id = mongoose.Types.ObjectId();
     feedArticles.articles.push(item);
   });
 
@@ -167,7 +178,7 @@ var feedArticles = new FeedArticles();
 
   writer.writeJSONtoFile(`./data/${feed_id}.json`,JSON.stringify(feedArticles))
   // Set CRON Services
-  setCron("",feedLink,feed_id)
+  //setCron("",feedLink,feed_id)
 
 
 })();
