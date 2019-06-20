@@ -16,9 +16,11 @@ router.use(function timeLog (req, res, next) {
   
 
 router.route('/')
-  .get(userController.authenticate)
+  .get(userController.getAll)
   .post(userController.create)
 
+router.route('/authenticate')
+  .post(userController.authenticate)
 /*
 router.route('/:id')
   .get(userController.getById)

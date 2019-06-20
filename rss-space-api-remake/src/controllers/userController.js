@@ -36,6 +36,7 @@ exports.create = function(req, res) {
 
 exports.authenticate = function(req,res) {
     userSchema.find({email: req.body.email}, (err, userInfo) => {
+        console.log(req.body)
         if(err) console.log(err)
 
         if (userInfo.length == 0)  {

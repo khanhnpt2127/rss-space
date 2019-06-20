@@ -14,7 +14,7 @@
               <font-awesome-icon icon="burn"/>
             </span> Hot
           </b-nav-item>
-          <b-nav-item v-if="isLogin" v-b-modal.addNewProviderModal>
+          <b-nav-item  v-show="isLogin" v-b-modal.addNewProviderModal>
             <span>
               <font-awesome-icon icon="plus-square"/>
             </span> New Feed
@@ -24,7 +24,7 @@
               <font-awesome-icon icon="sign-in-alt"/>
             </span> Login
           </b-nav-item>
-          <b-nav-item v-if="isLogin">
+          <b-nav-item v-show="isLogin" v-on:click="handleLogout" >
             <span>
               <font-awesome-icon icon="sign-out-alt"/>
             </span> Logout
@@ -41,13 +41,13 @@
       <b-form-input id="input-link" :state="null" placeholder></b-form-input>
     </b-modal>
 
-    <b-modal id="LoginModal" title="Add New Feed Provider">
+    <b-modal id="LoginModal" @ok="handleOk" title="Add New Feed Provider">
       <!--TODO: Add Validation-->
       <label for="input-username">UserName:</label>
-      <b-form-input id="input-username" :state="null" placeholder></b-form-input>
+      <b-form-input id="input-username" v-model="username" :state="null" placeholder></b-form-input>
 
       <label for="input-password" style="margin-top:10px">Password:</label>
-      <b-form-input id="input-password" type="password" :state="null" placeholder></b-form-input>
+      <b-form-input id="input-password" v-model="password" type="password" :state="null" placeholder></b-form-input>
     </b-modal>
   </div>
 </template>
@@ -55,9 +55,42 @@
 <script>
 export default {
   name: "Navbar",
+  methods: {
+     handleLogout() {
+       this.isLogin = false
+     }
+     ,
+     handleOk(bvModalEvt) {
+       
+        // Trigger submit handler
+        //this.handleSubmit()
+        const bodyData = `{ "email": "${this.username}", "password": "${this.password}"}`
+         
+         fetch('http://localhost:3000/api/user/authenticate', {
+            method: 'POST',
+            body: bodyData,
+            headers:{
+              'Content-Type': 'application/json'
+            }
+            })
+            .then(res => res.json())
+            .then((data) => {
+              if (data.msg == "OK") {
+              this.isLogin = true 
+            } 
+                
+
+            })
+        // Prevent modal from closing
+        if(!this.isLogin)  bvModalEvt.preventDefault() 
+     }
+  }
+  ,
   data() {
     return {
       isLogin: false,
+      username: '',
+      password: ''
     };
   }
 };
