@@ -12,8 +12,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "@inotom/vue-go-top": "^1.1.0",
+    "bcrypt": "^3.0.6",
     "bootstrap-vue": "^2.0.0-rc.23",
     "core-js": "^2.6.5",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
     "vue": "^2.6.10",
     "vue-awesome-swiper": "^3.1.3"
   },
