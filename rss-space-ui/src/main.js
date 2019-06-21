@@ -6,7 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSignOutAlt,faCaretDown, faCaretRight, faCog, faPlusSquare,faBurn, faNewspaper, faSignInAlt  } from '@fortawesome/free-solid-svg-icons'
+import { faSignOutAlt,faUserPlus,faCaretDown, faCaretRight, faCog, faPlusSquare,faBurn, faNewspaper, faSignInAlt  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCog)
 library.add(faPlusSquare)
@@ -16,6 +16,7 @@ library.add(faSignInAlt)
 library.add(faSignOutAlt)
 library.add(faCaretDown)
 library.add(faCaretRight) 
+library.add(faUserPlus) 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
  
 Vue.config.productionTip = false
