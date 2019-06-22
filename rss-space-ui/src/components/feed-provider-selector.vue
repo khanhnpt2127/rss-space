@@ -25,7 +25,7 @@
               <b-card style="max-height: 10rem;max-width: 20rem;" img-src="" img-alt="Image" img-top v-bind:title="feed.feedName" class="text-center text-break text-truncate" >
 
                 <b-card-text> {{ feed.name }}</b-card-text>
-                <b-button href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary">Subcribe</b-button>
+                <b-button v-on:click="handleSub(feed._id)" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary">Subcribe</b-button>
 
                 <b-button v-if="false" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary"> Unsubcribe </b-button>
               </b-card>
@@ -42,6 +42,9 @@
         </md-card-media>
       </md-card>
     </b-container>
+      <b-modal id="errLogin" title="BootstrapVue">
+    <p class="my-4">Please Login to Subscribe !!!</p>
+  </b-modal>
   </div>
 </template>
 
@@ -65,7 +68,19 @@ export default {
                 this.feedProviders = data
             })
         }
-    , 
+    ,
+    methods: {
+      handleSub(id) {
+        if(this.$isLoginMain) {
+          console.log(id)
+        } else {
+          console.log("test")
+          this.$bvModal.show("errLogin")
+
+        }
+      }
+    }
+    ,
     data() {
         return {
           swiperOption: {
@@ -83,7 +98,8 @@ export default {
             prevEl: '.swiper-button-prev'
           }
           },
-          feedProviders: []
+          feedProviders: [],
+          
         }
     },
 }

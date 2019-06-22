@@ -14,25 +14,25 @@
               <font-awesome-icon icon="burn"/>
             </span> Hot
           </b-nav-item>
-          <b-nav-item  v-show="isLogin" v-b-modal.addNewProviderModal>
+          <b-nav-item  v-show="this.$isLoginMain" v-b-modal.addNewProviderModal>
             <span>
               <font-awesome-icon icon="plus-square"/>
             </span> New Feed
           </b-nav-item>
-          <b-nav-item v-if="!isLogin" v-b-modal.LoginModal>
+          <b-nav-item v-if="!this.$isLoginMain" v-b-modal.LoginModal>
             <span>
               <font-awesome-icon icon="sign-in-alt"/>
             </span> Login
           </b-nav-item>
 
-          <b-nav-item v-if="!isLogin" v-b-modal.SignUpModal>
+          <b-nav-item v-if="!this.$isLoginMain" v-b-modal.SignUpModal>
             <span>
               <font-awesome-icon icon="user-plus"/>
             </span> Sign Up
           </b-nav-item>
           
 
-          <b-nav-item v-show="isLogin" v-on:click="handleLogout" >
+          <b-nav-item v-show="this.$isLoginMain" v-on:click="handleLogout" >
             <span>
               <font-awesome-icon icon="sign-out-alt"/>
             </span> Logout
@@ -81,7 +81,7 @@ export default {
   name: "Navbar",
   methods: {
      handleLogout() {
-       this.isLogin = false
+       this.$isLoginMain = false
      },
      handleNewFeed(bvModalEvt) {
           const bodyData = `{ "name": "${this.feedName}", "link": "${this.feedLink}"}`
@@ -98,6 +98,7 @@ export default {
                 if(data.msg != "duplicated") {
                   // success
                   //console.log((this.$refs))
+                   this.$bvModal.hide("addNewProviderModal") 
                 }
             })
 
@@ -120,13 +121,14 @@ export default {
             .then(res => res.json())
             .then((data) => {
               if (data.msg == "OK") {
-              this.isLogin = true 
+              this.$isLoginMain = true 
+              this.$bvModal.hide("LoginModal")
             } 
                 
 
             })
         // Prevent modal from closing
-        if(!this.isLogin)  bvModalEvt.preventDefault() 
+        if(!this.$isLoginMain)  bvModalEvt.preventDefault() 
      },
 
      handleSignUpOK(bvModalEvt) {
@@ -143,12 +145,13 @@ export default {
             .then((data) => {
               //console.log(data)
              if (data.msg == "OK") {
-              this.isLogin = true 
+              this.$isLoginMain = true               
+              this.$bvModal.hide("SignUpModal")
             } 
                 
             })
         // Prevent modal from closing
-        if(!this.isLogin)  bvModalEvt.preventDefault() 
+        if(!this.$isLoginMain)  bvModalEvt.preventDefault() 
      }
   }
   ,

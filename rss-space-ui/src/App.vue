@@ -2,8 +2,8 @@
     <div >
     <Navbar  />
     <feedProvider />
-    <FeedContent v-if="$isLoginGlobal" />
-    <FeedNoContent v-if="!$isLoginGlobal" />
+    <FeedContent v-if="$isLoginGlobal && !$isLoginMain" />
+    <FeedNoContent v-if="!$isLoginGlobal && !$isLoginMain" />
     <go-top bg-color="#16A2B8"></go-top>
     </div>
 </template>

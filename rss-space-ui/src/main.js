@@ -26,13 +26,17 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
 let globalData = new Vue({
-  data: { $isLoginGlobal: false }
+  data: { $isLoginGlobal: false , $isLoginMain: false }
 });
 Vue.mixin({
   computed: {
     $isLoginGlobal: {
       get: function () { return globalData.$data.$isLoginGlobal},
-      set: function (newColor) { globalData.$data.$isLoginGlobal = newColor; }
+      set: function (newValue) { globalData.$data.$isLoginGlobal = newValue; }
+    },
+    $isLoginMain: {
+      get: function () { return globalData.$data.$isLoginMain},
+      set: function (newValue) { globalData.$data.$isLoginMain = newValue; } 
     }
   }
 })
