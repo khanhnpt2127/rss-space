@@ -3,7 +3,9 @@
     <b-container>
       <!--Template-->
       <div style="margin-top: 10px;margin-right: 36px;">
-        
+        <div style="text-align: center">
+          <img src='../../public/103.gif' style="text-align: center" v-if="!isLoaded"/>
+        </div>
         <div v-for="(feed,index) in feedData" :key="feed.feedId">
         <div style="margin-top: 20px;">
             <b-button size="sm" v-b-toggle="'accordion-' + index" style="margin-right: 10 px; background-color:  ;border: none; "> <font-awesome-icon style="font-size: 30px;" icon="caret-down" /> </b-button>
@@ -43,6 +45,7 @@ export default {
             .then(res => res.json())
             .then((data) => {
                 this.feedData = data
+                this.isLoaded = true
             })
   },
   methods: {
@@ -54,6 +57,7 @@ export default {
   data() {
       return {
         feedData: [],
+        isLoaded: false
        
       }
   }
