@@ -74,6 +74,9 @@
 </template>
 
 <script>
+
+import { isLoginGlo } from '../shared/isLogin'
+
 export default {
   name: "Navbar",
   methods: {
@@ -94,7 +97,7 @@ export default {
             .then((data) => {
                 if(data.msg != "duplicated") {
                   // success
-                  console.log((this.$refs))
+                  //console.log((this.$refs))
                 }
             })
 
@@ -128,7 +131,7 @@ export default {
 
      handleSignUpOK(bvModalEvt) {
          const bodyData = `{ "email": "${this.usernameSignUp}", "password": "${this.passwordSignUp}"}`
-          console.log(bodyData)
+          //console.log(bodyData)
          fetch('http://localhost:3000/api/user/', {
             method: 'POST',
             body: bodyData,
@@ -138,7 +141,7 @@ export default {
             })
             .then(res => res.json())
             .then((data) => {
-              console.log(data)
+              //console.log(data)
              if (data.msg == "OK") {
               this.isLogin = true 
             } 
@@ -151,7 +154,7 @@ export default {
   ,
   data() {
     return {
-      isLogin: false,
+      isLogin: isLoginGlo,
       username: '',
       password: '',
       feedName: '',

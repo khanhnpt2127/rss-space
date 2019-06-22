@@ -6,7 +6,7 @@
         
         <div v-for="(feed,index) in feedData" :key="feed.feedId">
         <div style="margin-top: 20px;">
-            <b-button size="sm" v-b-toggle="'accordion-' + index" style="margin-right: 10 px; background-color: rgb(233, 236, 239);border: none; "> <font-awesome-icon style="font-size: 30px;" icon="caret-down" /> </b-button>
+            <b-button size="sm" v-b-toggle="'accordion-' + index" style="margin-right: 10 px; background-color:  ;border: none; "> <font-awesome-icon style="font-size: 30px;" icon="caret-down" /> </b-button>
             <div style="display:inline-block; vertical-align: center; margin-left: 10px; text-align: center"> <span style="font-size: 20px; font-weight: bold" > {{feed.feedName}} </span> <span> <font-awesome-icon style="font-size: 18px;" icon="cog" /> </span></div>
         </div>
         <b-collapse v-bind:id="'accordion-' + index" accordion="my-accordion" role="tabpanel">
@@ -46,7 +46,7 @@ export default {
             })
   },
   methods: {
-    handleItemClick(id) {
+    handleItemClick() {
 
       //console.log(id)
     }

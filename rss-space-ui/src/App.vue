@@ -1,8 +1,9 @@
 <template>
-    <div>
-    <Navbar />
+    <div >
+    <Navbar  />
     <feedProvider />
-    <FeedContent />
+    <FeedContent v-if="$isLoginGlobal" />
+    <FeedNoContent v-if="!$isLoginGlobal" />
     <go-top bg-color="#16A2B8"></go-top>
     </div>
 </template>
@@ -13,6 +14,7 @@
 import Navbar from './components/nav-bar.vue'
 import feedProvider from './components/feed-provider-selector.vue'
 import FeedContent from './components/feed-content.vue'
+import FeedNoContent from './components/feed-nocontent.vue'
 import GoTop from '@inotom/vue-go-top';
 
 
@@ -22,7 +24,13 @@ export default {
     Navbar,
     feedProvider,
     FeedContent,
-    GoTop
+    GoTop,
+    FeedNoContent
+  },
+  data() {
+    return {
+      isShowContent: this.store
+    }
   }
 }
 </script>

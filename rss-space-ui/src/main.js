@@ -20,10 +20,25 @@ library.add(faUserPlus)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
  
 Vue.config.productionTip = false
-
+Vue.store= Vue.prototype.store = false;
 Vue.config.productionTip = false
 //Vue.use(GoTop);
 Vue.use(BootstrapVue)
+
+let globalData = new Vue({
+  data: { $isLoginGlobal: false }
+});
+Vue.mixin({
+  computed: {
+    $isLoginGlobal: {
+      get: function () { return globalData.$data.$isLoginGlobal},
+      set: function (newColor) { globalData.$data.$isLoginGlobal = newColor; }
+    }
+  }
+})
+
+
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
