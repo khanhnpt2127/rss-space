@@ -42,8 +42,9 @@ exports.authenticate = function(req,res) {
             res.status(412).send({ "msg": "user is not existed" }) 
             return;
         }
-
+        console.log(userInfo[0])
         bcrypt.compare(req.body.password, userInfo[0].password).then((match) => {
+            console.log(match)
             if(match) {
                 res.status(200).send(userInfo[0])
             } else {

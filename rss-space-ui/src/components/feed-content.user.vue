@@ -57,7 +57,7 @@ export default {
             .then((data) => {
                 this.feedData = data
                 this.isLoaded = true
-                console.log(data)
+                //console.log(data)
                 if(data.msg == "empty") {
                   this.isEmpty = true
                 }

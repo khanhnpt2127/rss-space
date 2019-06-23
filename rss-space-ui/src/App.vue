@@ -1,7 +1,8 @@
 <template>
     <div >
     <Navbar  />
-    <feedProvider />
+    <feedProvider v-if="!$isLoginMain" />
+    <feedProviderUser v-if="$isLoginMain" />
     <FeedContent v-if="$isLoginGlobal && !$isLoginMain" />
     <FeedNoContent v-if="!$isLoginGlobal && !$isLoginMain" />
      <FeedContentUser v-if="$isLoginMain" />
@@ -18,7 +19,7 @@ import FeedContent from './components/feed-content.vue'
 import FeedNoContent from './components/feed-nocontent.vue'
 import GoTop from '@inotom/vue-go-top';
 import FeedContentUser from './components/feed-content.user.vue'
-
+import feedProviderUser from './components/feed-provider-selector.user' 
 export default {
   name: 'app',
   components: {
@@ -27,7 +28,8 @@ export default {
     FeedContent,
     GoTop,
     FeedNoContent,
-   FeedContentUser 
+   FeedContentUser,
+   feedProviderUser 
   },
   data() {
     return {
