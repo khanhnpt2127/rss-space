@@ -19,8 +19,11 @@ const UserSchema = new Schema({
   type: String,
   trim: true,
   required: true
+ },
+ subscribed: {
+     type: Array, default: []
  }
-}, {collection: "Users"});
+}, {collection: "Users", usePushEach: true});
 
 
 // hash user password before saving into database

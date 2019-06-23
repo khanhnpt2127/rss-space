@@ -21,6 +21,9 @@ router.route('/')
 
 router.route('/authenticate')
   .post(userController.authenticate)
+
+router.route('/subscribe')
+        .post(userController.subscribed)
 /*
 router.route('/:id')
   .get(userController.getById)

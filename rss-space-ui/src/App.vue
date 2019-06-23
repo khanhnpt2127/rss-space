@@ -4,6 +4,7 @@
     <feedProvider />
     <FeedContent v-if="$isLoginGlobal && !$isLoginMain" />
     <FeedNoContent v-if="!$isLoginGlobal && !$isLoginMain" />
+     <FeedContent v-if="$isLoginMain" />
     <go-top bg-color="#16A2B8"></go-top>
     </div>
 </template>
@@ -16,7 +17,7 @@ import feedProvider from './components/feed-provider-selector.vue'
 import FeedContent from './components/feed-content.vue'
 import FeedNoContent from './components/feed-nocontent.vue'
 import GoTop from '@inotom/vue-go-top';
-
+import FeedContentUser from './components/feed-content.user.vue'
 
 export default {
   name: 'app',
@@ -25,7 +26,8 @@ export default {
     feedProvider,
     FeedContent,
     GoTop,
-    FeedNoContent
+    FeedNoContent,
+   FeedContentUser 
   },
   data() {
     return {

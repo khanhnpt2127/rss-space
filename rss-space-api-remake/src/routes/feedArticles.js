@@ -15,7 +15,7 @@ router.use(function timeLog (req, res, next) {
 
 router.route('/')
     .get(feedArticlesController.getAll)
-
+    .post(feedArticlesController.getFeedByUser)
 
 
 module.exports = router

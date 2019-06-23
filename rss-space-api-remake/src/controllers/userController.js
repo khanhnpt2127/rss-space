@@ -54,3 +54,25 @@ exports.authenticate = function(req,res) {
         })
 }
 
+exports.subscribed = function(req,res) {
+    userSchema.findOne({_id: req.body.userId}, (err, userInfo) => { 
+        if(err) console.log(err)
+        console.log(userInfo)
+        let isExisted = false
+        userInfo.subscribed.forEach(element => {
+            if(element == req.body.feedProviderId) {
+                isExisted = true
+            }
+        }); 
+        if(!isExisted) {
+        userInfo.subscribed.push(req.body.feedProviderId)
+        userInfo.save((err, user) => {
+            if(err) console.log(err)
+            res.status(201).send("OK") 
+        })
+        } else {
+            res.status(200).send({"msg":"existed"})
+        }
+
+    })
+}
