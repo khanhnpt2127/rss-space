@@ -24,6 +24,9 @@ router.route('/authenticate')
 
 router.route('/subscribe')
         .post(userController.subscribed)
+
+router.route('/unsubscribe')
+        .post(userController.unsubscribed)
 /*
 router.route('/:id')
   .get(userController.getById)

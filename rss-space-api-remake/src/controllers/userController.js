@@ -57,7 +57,7 @@ exports.authenticate = function(req,res) {
 exports.subscribed = function(req,res) {
     userSchema.findOne({_id: req.body.userId}, (err, userInfo) => { 
         if(err) console.log(err)
-        console.log(userInfo)
+        //console.log(userInfo)
         let isExisted = false
         userInfo.subscribed.forEach(element => {
             if(element == req.body.feedProviderId) {
@@ -76,3 +76,19 @@ exports.subscribed = function(req,res) {
 
     })
 }
+
+
+exports.unsubscribed = function(req, res) {
+    userSchema.findOne({_id: req.body.userId}, (err, userInfo) => { 
+        if(err) console.log(err)
+        
+           
+        userInfo.subscribed = userInfo.subscribed.filter(x => x != req.body.feedProviderId)
+        userInfo.save((err, user) => {
+            if(err) console.log(err)
+            //console.log(user)
+            res.status(201).send("OK") 
+        })
+           
+    }) } 
+    
