@@ -4,7 +4,7 @@
     <feedProvider />
     <FeedContent v-if="$isLoginGlobal && !$isLoginMain" />
     <FeedNoContent v-if="!$isLoginGlobal && !$isLoginMain" />
-     <FeedContent v-if="$isLoginMain" />
+     <FeedContentUser v-if="$isLoginMain" />
     <go-top bg-color="#16A2B8"></go-top>
     </div>
 </template>

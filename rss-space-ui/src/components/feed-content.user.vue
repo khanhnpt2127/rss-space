@@ -2,7 +2,8 @@
   <div style="margin-top: 20px;">
     <b-container>
       <!--Template-->
-      <div style="margin-top: 10px;margin-right: 36px;">
+      <h1 v-if="isEmpty"> No feed found! Please subscribe some feeds </h1>
+      <div v-if="!isEmpty" style="margin-top: 10px;margin-right: 36px;">
         <div style="text-align: center">
           <img src='../../public/103.gif' style="text-align: center" v-if="!isLoaded"/>
         </div>
@@ -41,11 +42,25 @@
 export default {
   name: "FeedContentUser",
   mounted() {
-       fetch("http://localhost:3000/api/feedArticles/")
+
+
+  const bodyData = `{ "userId": "${this.$userId}"}`
+          //console.log(bodyData)
+         fetch('http://localhost:3000/api/feedArticles/', {
+            method: 'POST',
+            body: bodyData,
+            headers:{
+              'Content-Type': 'application/json'
+            }
+            })
             .then(res => res.json())
             .then((data) => {
                 this.feedData = data
                 this.isLoaded = true
+                console.log(data)
+                if(data.msg == "empty") {
+                  this.isEmpty = true
+                }
             })
   },
   methods: {
@@ -57,7 +72,8 @@ export default {
   data() {
       return {
         feedData: [],
-        isLoaded: false
+        isLoaded: false,
+        isEmpty: false
        
       }
   }

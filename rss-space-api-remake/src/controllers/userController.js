@@ -25,7 +25,7 @@ exports.create = function(req, res) {
 
             user.save((err, user) => {
                 if(err) console.log(err)
-                res.status(201).send({"msg" : "OK"})
+                res.status(201).send(user)
             }) 
             return;
         }
@@ -45,7 +45,7 @@ exports.authenticate = function(req,res) {
 
         bcrypt.compare(req.body.password, userInfo[0].password).then((match) => {
             if(match) {
-                res.status(200).send({"msg" : "OK"})
+                res.status(200).send(userInfo[0])
             } else {
                 res.send({"msg": "fail"}) 
             }   

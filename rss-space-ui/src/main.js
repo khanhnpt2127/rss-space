@@ -37,7 +37,11 @@ Vue.mixin({
     $isLoginMain: {
       get: function () { return globalData.$data.$isLoginMain},
       set: function (newValue) { globalData.$data.$isLoginMain = newValue; } 
-    }
+    },
+    $userId: {
+      get: function () { return globalData.$data.$userId},
+      set: function (newValue) { globalData.$data.$userId = newValue; } 
+    } 
   }
 })
 

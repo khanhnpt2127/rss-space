@@ -37,7 +37,8 @@ exports.getByUser = function(req,res) {
                 
                 if(e1._id == element) {
                   e1.isSub  =true 
-                  console.log(element)}
+                  //console.log(element)
+                }
                 
             });
           })

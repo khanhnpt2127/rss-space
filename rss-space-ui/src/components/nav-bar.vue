@@ -120,8 +120,9 @@ export default {
             })
             .then(res => res.json())
             .then((data) => {
-              if (data.msg == "OK") {
-              this.$isLoginMain = true 
+              if (data._id) {
+              this.$isLoginMain = true
+               this.$userId = data._id 
               this.$bvModal.hide("LoginModal")
             } 
                 
@@ -144,8 +145,9 @@ export default {
             .then(res => res.json())
             .then((data) => {
               //console.log(data)
-             if (data.msg == "OK") {
-              this.$isLoginMain = true               
+             if (data._id) {
+              this.$isLoginMain = true
+              this.$userId = data._id        
               this.$bvModal.hide("SignUpModal")
             } 
                 
