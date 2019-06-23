@@ -15,6 +15,8 @@ router.route('/')
       .get(feedController.getAll)
       .post(feedController.postNew)
 
+router.route('/getByUser')
+      .post(feedController.getByUser)
 
 router.route('/:id')
       .get(feedController.getById)

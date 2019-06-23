@@ -10,6 +10,9 @@ let validator = require('../utils/validator')
 let sendBroker = require('../utils/sendBroker')
 
 
+// User
+let UserModel = require('../models/user')
+
 // handle get Feed action
 exports.getAll = function(req,res) {
 
@@ -23,6 +26,30 @@ exports.getAll = function(req,res) {
 		})	
 
 }
+
+exports.getByUser = function(req,res) {
+
+    UserModel.findOne({ _id: req.body.userId },(err,user) => {
+        if(err) console.log(err)
+        FeedModel.find({},function(err,f){ 
+          f.forEach(e1 => {
+            user.subscribed.forEach(element => {
+                
+                if(e1._id == element) {
+                  e1.isSub  =true 
+                  console.log(element)}
+                
+            });
+          })
+          
+          res.status(200).send(f)
+        })
+
+    })
+
+}
+
+
 
 // handle post NEW Feed
 exports.postNew = function(req,res) {
