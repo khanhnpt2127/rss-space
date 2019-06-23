@@ -82,6 +82,8 @@ export default {
   methods: {
      handleLogout() {
        this.$isLoginMain = false
+         $cookies.set('userId', '')
+        this.$isLoginGlobal = false
      },
      handleNewFeed(bvModalEvt) {
           const bodyData = `{ "name": "${this.feedName}", "link": "${this.feedLink}"}`
