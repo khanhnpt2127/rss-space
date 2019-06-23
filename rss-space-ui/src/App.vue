@@ -22,6 +22,18 @@ import FeedContentUser from './components/feed-content.user.vue'
 import feedProviderUser from './components/feed-provider-selector.user' 
 export default {
   name: 'app',
+  mounted() {
+    this.$userId = $cookies.get('userId')
+    if(this.$userId) {
+      this.$isLoginGlobal = true
+      this.$isLoginMain = true
+    } 
+    //console.log($cookies.get('userId'))
+    // 30 day after, expire
+    this.$cookies.config('30d')
+
+  }
+  ,
   components: {
     Navbar,
     feedProvider,

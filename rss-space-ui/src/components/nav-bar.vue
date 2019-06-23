@@ -124,6 +124,7 @@ export default {
               if (data._id) {
               this.$isLoginMain = true
                this.$userId = data._id 
+              $cookies.set('userId', data._id)
               this.$bvModal.hide("LoginModal")
             } 
                 
@@ -148,7 +149,8 @@ export default {
               //console.log(data)
              if (data._id) {
               this.$isLoginMain = true
-              this.$userId = data._id        
+              this.$userId = data._id 
+               $cookies.set('userId', data._id)       
               this.$bvModal.hide("SignUpModal")
             } 
                 

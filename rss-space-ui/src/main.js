@@ -22,6 +22,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 Vue.store= Vue.prototype.store = false;
 Vue.config.productionTip = false
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
 //Vue.use(GoTop);
 Vue.use(BootstrapVue)
 
@@ -41,10 +43,7 @@ Vue.mixin({
     $userId: {
       get: function () { return globalData.$data.$userId},
       set: function (newValue) { globalData.$data.$userId = newValue; } 
-    },
-    reloadAll: function() {
-      this.$forceUpdate();
-    } 
+    }
   }
 })
 

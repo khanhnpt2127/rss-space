@@ -84,7 +84,7 @@ export default {
     methods: {
       handleSub(id) {
         if(this.$isLoginMain) {
-          console.log(id)
+          //console.log(id)
          
           const bodyData = `{ "userId": "${this.$userId}", "feedProviderId": "${id}"}`
           //console.log(bodyData)
@@ -96,11 +96,11 @@ export default {
             }
             })
             .then((data) => {
-            
+              //TODO: Need To re-Render All Conponent
             }) 
 
 
-          this.$forceUpdate()
+          //this.$forceUpdate()
         } else {
           //console.log("test")
           this.$bvModal.show("errLogin")
