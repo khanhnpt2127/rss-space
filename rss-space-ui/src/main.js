@@ -41,6 +41,9 @@ Vue.mixin({
     $userId: {
       get: function () { return globalData.$data.$userId},
       set: function (newValue) { globalData.$data.$userId = newValue; } 
+    },
+    reloadAll: function() {
+      this.$forceUpdate();
     } 
   }
 })

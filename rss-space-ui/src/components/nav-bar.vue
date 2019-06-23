@@ -120,7 +120,7 @@ export default {
             })
             .then(res => res.json())
             .then((data) => {
-              console.log(data)
+              //console.log(data)
               if (data._id) {
               this.$isLoginMain = true
                this.$userId = data._id 

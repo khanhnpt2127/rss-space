@@ -85,8 +85,24 @@ export default {
       handleSub(id) {
         if(this.$isLoginMain) {
           console.log(id)
+         
+          const bodyData = `{ "userId": "${this.$userId}", "feedProviderId": "${id}"}`
+          //console.log(bodyData)
+         fetch('http://localhost:3000/api/user/subscribe', {
+            method: 'POST',
+            body: bodyData,
+            headers:{
+              'Content-Type': 'application/json'
+            }
+            })
+            .then((data) => {
+            
+            }) 
+
+
+          this.$forceUpdate()
         } else {
-          console.log("test")
+          //console.log("test")
           this.$bvModal.show("errLogin")
 
         }

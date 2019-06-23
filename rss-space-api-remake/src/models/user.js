@@ -22,15 +22,17 @@ const UserSchema = new Schema({
  },
  subscribed: {
      type: Array, default: []
- }
+ },
+ isHash: {type: Boolean, default: false}
 }, {collection: "Users", usePushEach: true});
 
 
 // hash user password before saving into database
 UserSchema.pre('save', function(next){
-    if(!this._id) {
+    if(!this.isHash) {
     this.password = bcrypt.hashSync(this.password, saltRounds);
     }
+    this.isHash = true
     next();
 });
 
