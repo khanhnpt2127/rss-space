@@ -27,7 +27,7 @@
                 <b-card-text> {{ feed.name }}</b-card-text>
                 <b-button v-if="!feed.isSub" v-on:click="handleSub(feed._id)" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary">Subcribe</b-button>
 
-                <b-button v-if="feed.isSub" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary"> Unsubcribe </b-button>
+                <b-button v-if="feed.isSub" v-on:click="handleUnSub(feed._id)" href="#" style="background-color: #17a2b8; border: none; display: block; margin-left: 20px; margin-right: 30px" variant="primary"> Unsubcribe </b-button>
               </b-card>
             </swiper-slide>
 
@@ -89,6 +89,31 @@ export default {
           const bodyData = `{ "userId": "${this.$userId}", "feedProviderId": "${id}"}`
           //console.log(bodyData)
          fetch('http://localhost:3000/api/user/subscribe', {
+            method: 'POST',
+            body: bodyData,
+            headers:{
+              'Content-Type': 'application/json'
+            }
+            })
+            .then((data) => {
+              //TODO: Need To re-Render All Conponent
+            }) 
+
+
+          //this.$forceUpdate()
+        } else {
+          //console.log("test")
+          this.$bvModal.show("errLogin")
+
+        }
+      },
+      handleUnSub(id) {
+        if(this.$isLoginMain) {
+          //console.log(id)
+         
+          const bodyData = `{ "userId": "${this.$userId}", "feedProviderId": "${id}"}`
+          //console.log(bodyData)
+         fetch('http://localhost:3000/api/user/unsubscribe', {
             method: 'POST',
             body: bodyData,
             headers:{

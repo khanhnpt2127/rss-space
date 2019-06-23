@@ -70,14 +70,11 @@ export default {
         }
     ,
     methods: {
-      handleSub(id) {
-        if(this.$isLoginMain) {
-          console.log(id)
-        } else {
-          console.log("test")
-          this.$bvModal.show("errLogin")
+      handleSub() {
+      
+       this.$bvModal.show("errLogin")
 
-        }
+        
       }
     }
     ,
